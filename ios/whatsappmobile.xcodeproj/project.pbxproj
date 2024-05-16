@@ -14,6 +14,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-whatsappmobile-whatsappmobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-whatsappmobile-whatsappmobileTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		4393D971B95E4EF48BF73873 /* HelveticaNeueBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B9FEE80E7094A42942158B6 /* HelveticaNeueBlack.otf */; };
+		EFF00C34F72F4E69A6BB25A3 /* HelveticaNeueBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 416D48875F5B490DAE14AF04 /* HelveticaNeueBold.otf */; };
+		9437D88A5406418B93743DC4 /* HelveticaNeueLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7BD5E1BBA86431FB681A301 /* HelveticaNeueLight.otf */; };
+		522D3FDF6A90434CB328F219 /* HelveticaNeueMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D84A305337F4430CA34AF692 /* HelveticaNeueMedium.otf */; };
+		1427FAB59DEC4D738D2CFD34 /* HelveticaNeueThin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C72268CA453646D59FB118B9 /* HelveticaNeueThin.otf */; };
+		06709967C7C7496F8D8C9553 /* HelveticaNeueUltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B7AFA792AD5A4A64B23D5A80 /* HelveticaNeueUltraLight.otf */; };
+		7D206EEFCA754FEBBC4E358F /* HelveticaNeueHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 364BEEB3A33F4A368D4CDC91 /* HelveticaNeueHeavy.otf */; };
+		573529C4969E453F9C8AA139 /* HelveticaNeueRoman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CF52B77C5E545058D454DB4 /* HelveticaNeueRoman.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = whatsappmobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = whatsappmobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = whatsappmobile/main.m; sourceTree = "<group>"; };
-	    13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = whatsappmobile/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = whatsappmobile/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-whatsappmobile-whatsappmobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-whatsappmobile-whatsappmobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-whatsappmobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsappmobile.debug.xcconfig"; path = "Target Support Files/Pods-whatsappmobile/Pods-whatsappmobile.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-whatsappmobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsappmobile.release.xcconfig"; path = "Target Support Files/Pods-whatsappmobile/Pods-whatsappmobile.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +53,14 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = whatsappmobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-whatsappmobile-whatsappmobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsappmobile-whatsappmobileTests.release.xcconfig"; path = "Target Support Files/Pods-whatsappmobile-whatsappmobileTests/Pods-whatsappmobile-whatsappmobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		8B9FEE80E7094A42942158B6 /* HelveticaNeueBlack.otf */ = {isa = PBXFileReference; name = "HelveticaNeueBlack.otf"; path = "../assets/fonts/HelveticaNeueBlack.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		416D48875F5B490DAE14AF04 /* HelveticaNeueBold.otf */ = {isa = PBXFileReference; name = "HelveticaNeueBold.otf"; path = "../assets/fonts/HelveticaNeueBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7BD5E1BBA86431FB681A301 /* HelveticaNeueLight.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLight.otf"; path = "../assets/fonts/HelveticaNeueLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D84A305337F4430CA34AF692 /* HelveticaNeueMedium.otf */ = {isa = PBXFileReference; name = "HelveticaNeueMedium.otf"; path = "../assets/fonts/HelveticaNeueMedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C72268CA453646D59FB118B9 /* HelveticaNeueThin.otf */ = {isa = PBXFileReference; name = "HelveticaNeueThin.otf"; path = "../assets/fonts/HelveticaNeueThin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B7AFA792AD5A4A64B23D5A80 /* HelveticaNeueUltraLight.otf */ = {isa = PBXFileReference; name = "HelveticaNeueUltraLight.otf"; path = "../assets/fonts/HelveticaNeueUltraLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		364BEEB3A33F4A368D4CDC91 /* HelveticaNeueHeavy.otf */ = {isa = PBXFileReference; name = "HelveticaNeueHeavy.otf"; path = "../assets/fonts/HelveticaNeueHeavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0CF52B77C5E545058D454DB4 /* HelveticaNeueRoman.otf */ = {isa = PBXFileReference; name = "HelveticaNeueRoman.otf"; path = "../assets/fonts/HelveticaNeueRoman.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +140,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2B7F436079344D5D995B4D43 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +166,22 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		2B7F436079344D5D995B4D43 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				8B9FEE80E7094A42942158B6 /* HelveticaNeueBlack.otf */,
+				416D48875F5B490DAE14AF04 /* HelveticaNeueBold.otf */,
+				D7BD5E1BBA86431FB681A301 /* HelveticaNeueLight.otf */,
+				D84A305337F4430CA34AF692 /* HelveticaNeueMedium.otf */,
+				C72268CA453646D59FB118B9 /* HelveticaNeueThin.otf */,
+				B7AFA792AD5A4A64B23D5A80 /* HelveticaNeueUltraLight.otf */,
+				364BEEB3A33F4A368D4CDC91 /* HelveticaNeueHeavy.otf */,
+				0CF52B77C5E545058D454DB4 /* HelveticaNeueRoman.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +278,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				4393D971B95E4EF48BF73873 /* HelveticaNeueBlack.otf in Resources */,
+				EFF00C34F72F4E69A6BB25A3 /* HelveticaNeueBold.otf in Resources */,
+				9437D88A5406418B93743DC4 /* HelveticaNeueLight.otf in Resources */,
+				522D3FDF6A90434CB328F219 /* HelveticaNeueMedium.otf in Resources */,
+				1427FAB59DEC4D738D2CFD34 /* HelveticaNeueThin.otf in Resources */,
+				06709967C7C7496F8D8C9553 /* HelveticaNeueUltraLight.otf in Resources */,
+				7D206EEFCA754FEBBC4E358F /* HelveticaNeueHeavy.otf in Resources */,
+				573529C4969E453F9C8AA139 /* HelveticaNeueRoman.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

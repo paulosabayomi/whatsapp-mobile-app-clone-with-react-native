@@ -6,113 +6,100 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
-  StyleSheet,
-  Text,
   useColorScheme,
-  View,
+  Text
 } from 'react-native';
+import useAppColor from './shared/useColor';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import TabComponent from './components/TabComponent';
+import SettingsComponent from './components/Settings';
+// @ts-ignore
+import SearchIcon from "./assets/icons/search.svg"
+import { WView } from './shared/themed';
+import fonts from './shared/fonts';
+import ChatSettings from './components/ChatSettings';
+import { useAppDispatch } from './shared/rdx-hooks';
+import { setColorMode } from './shared/rdx-slice';
+import storage, { colorModeStoreName } from './shared/db-store';
+import ChatRoute from './components/chats-comps/ChatRoute';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+const Stack = createNativeStackNavigator();
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const appColor = useAppColor();
+  const dispatch = useAppDispatch();
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+
+  React.useLayoutEffect(() => {
+    storage.load({key: colorModeStoreName})
+    .then((data: any) => {
+      console.log("color data", data);
+      // dispatch(setColorMode())
+      
+    })
+    .catch(err => err)
+  }, [])
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        backgroundColor={appColor.dark_blue_10}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" options={{headerShown: false}} component={TabComponent} />
+          <Stack.Screen name="Settings" 
+            options={{
+              headerRight(props) {
+                return <WView style={{width: 28, height: 28}}><SearchIcon /></WView>
+              },
+              headerTitleStyle: {
+                fontFamily: fonts.medium,
+                fontSize: 25,
+                color: appColor.text_color_1
+              },
+              headerStyle: {
+                backgroundColor: appColor.dark_blue_10
+              }
+            }} 
+            component={SettingsComponent} />
+            <Stack.Screen name='chat-settings' 
+              options={{
+                headerTitleStyle: {
+                  fontFamily: fonts.roman,
+                  fontSize: 28,
+                  color: appColor.text_color_1
+                },
+                headerTitle: "Chats",
+                headerStyle: {
+                  backgroundColor: appColor.dark_blue_10
+                }
+              }} 
+              component={ChatSettings} />
+            <Stack.Screen 
+                options={{
+                  headerTitle: '',
+                  headerStyle: {
+                    backgroundColor: appColor.dark_blue_10
+                  }
+              }}
+                name='chatDefault'
+                component={ChatRoute}
+              />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaView>
   );
-}
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+}
 
 export default App;
